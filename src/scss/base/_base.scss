@@ -40,3 +40,7 @@ h2.line {
     padding-bottom: 12px;
   }
 }
+button {
+  @include transition;
+  cursor: pointer;
+}

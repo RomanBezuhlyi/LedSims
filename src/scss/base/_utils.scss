@@ -4,6 +4,9 @@
 .no-scroll {
   overflow-y: hidden;
 }
+.show {
+  top: 0 !important;
+}
 .primary {
   @include flex(row, center, center);
   color: $white;
