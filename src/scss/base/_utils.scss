@@ -8,7 +8,9 @@
   top: 0 !important;
 }
 .primary {
-  @include flex(row, center, center);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: $white;
   font-family: $font-main;
   font-size: 14px;
@@ -23,9 +25,14 @@
     color: $accent;
     background-color: transparent;
   }
+  @media (max-width: 991px) {
+    font-size: 13px;
+  }
 }
 .outline {
-  @include flex(row, center, center);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: $text;
   font-family: $font-main;
   font-size: 14px;
@@ -39,6 +46,9 @@
   &:hover {
     color: $white;
     background-color: $accent;
+  }
+  @media (max-width: 991px) {
+    font-size: 13px;
   }
 }
 .tab {
