@@ -1,0 +1,177 @@
+.calculate-wrap {
+  margin: 0 50px;
+  border-radius: 31px;
+  background: $bg;
+  padding: 64px 0 87px 0;
+  @media (max-width: 1200px) {
+    margin: 0 10px;
+  }
+  @media (max-width: 991px) {
+    padding: 35px 0;
+  }
+}
+.calculate {
+  h2 {
+    text-align: center;
+    margin-bottom: 34px;
+    @media (max-width: 991px) {
+      margin-bottom: 15px;
+    }
+  }
+  p {
+    margin: auto;
+    width: 508px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+    @media (max-width: 991px) {
+      width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__content {
+    @include flex(row, center, center);
+    gap: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__left-form,
+  &__right-form {
+    @include flex(column, flex-start, flex-start);
+    .label {
+      display: block;
+      color: $text;
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 24px;
+      margin-bottom: 3px;
+      @media (max-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+    .input-wrap {
+      position: relative;
+      width: 100%;
+      img {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include transition;
+        z-index: 4;
+        pointer-events: none;
+      }
+    }
+
+    .input {
+      position: relative;
+      color: #000;
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      width: 100%;
+      padding: 16px 22px 15px 22px;
+      border-radius: 12px;
+      background: $inputBg;
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+    .input-dropdown {
+      position: absolute;
+      top: 40px;
+      z-index: 10;
+      @include flex(column, flex-start, flex-start);
+      display: none;
+      width: 100%;
+      color: #000;
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      width: 100%;
+      padding: 16px 0 15px 0;
+      border-radius: 0 0 12px 12px;
+      background: $inputBg;
+      box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+      @include transition;
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+      &__item,
+      &__item2 {
+        width: 100%;
+        font-weight: 500;
+        padding: 5px 22px 5px 22px;
+        cursor: pointer;
+        @include transition;
+      }
+      &__item:hover,
+      &__item2:hover {
+        color: $accent;
+        background-color: rgba($color: $grey, $alpha: 0.2);
+      }
+    }
+
+    .range-wrapper {
+      width: 100%;
+      position: relative;
+      top: -10px;
+      z-index: 3;
+    }
+
+    .range-line,
+    .range-line2 {
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      height: 1px;
+      background-color: $accent;
+      width: 0;
+    }
+    .range {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  &__submit {
+    margin-top: 29px;
+    @include flex(row, space-between, flex-end);
+    @media (max-width: 768px) {
+      margin-top: 7px;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    button {
+      padding: 16px 62px 15px 62px;
+      border-radius: 12px;
+      @media (max-width: 768px) {
+        margin: auto;
+        padding: 16px 53px 15px 53px;
+      }
+    }
+    span {
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+}
