@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <title>LED SIMS LVIV</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -50,7 +50,8 @@
   </div>
 </header>
 
-    <main><section id="hero" class="hero-wrap">
+    <main>
+      <section id="hero" class="hero-wrap">
   <img class="hero-wrap-img" src="./img/hero-1.png" alt="" />
   <div class="container">
     <div class="hero">
@@ -79,7 +80,111 @@
     </div>
   </div>
 </section>
-</main>
+ <section class="calculate-wrap" id="calculate">
+  <div class="container">
+    <div class="calculate">
+      <h2>Розрахувати вартість екрану</h2>
+      <p>
+        Заповніть форму нижче, наш фахівець підготує для вас комерційну
+        пропозицію і передзвонить найближчим часом.
+      </p>
+
+      <div class="calculate__content">
+        <div class="calculate__left">
+          <div class="calculate__left-form">
+            <label class="label" for="inputValue">Довжина екрану*</label>
+            <input
+              class="input"
+              type="text"
+              id="inputValue"
+              value="4,900 м"
+              readonly
+            />
+            <div class="range-wrapper">
+              <input
+                class="range"
+                type="range"
+                id="slider"
+                min="0"
+                max="20000"
+                step="100"
+                value="4900"
+              />
+              <div class="range-line"></div>
+            </div>
+          </div>
+          <div class="calculate__left-form">
+            <label class="label" for="inputDrop"
+              >Тип екрану/ крок пікселю:</label
+            >
+            <div class="input-wrap">
+              <input
+                class="input"
+                style="cursor: pointer"
+                type="text"
+                id="inputDrop"
+                value="Внутрішній екран / 3.75 см"
+                readonly
+              />
+              <img src="./img/chev-down.svg" alt="" id="dropdownIcon" />
+              <ul class="input-dropdown" id="dropdownList">
+                <li class="input-dropdown__item">Зовнішній екран / 3.75 см</li>
+                <li class="input-dropdown__item">Внутрішній екран / 3.75 см</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="calculate__right">
+          <div class="calculate__right-form">
+            <label class="label" for="inputValue2">Висота екрану*</label>
+            <input
+              class="input"
+              type="text"
+              id="inputValue2"
+              value="1,900 м"
+              readonly
+            />
+            <div class="range-wrapper">
+              <input
+                class="range"
+                type="range"
+                id="slider2"
+                min="0"
+                max="8000"
+                step="100"
+                value="1900"
+              />
+              <div class="range-line2"></div>
+            </div>
+          </div>
+          <div class="calculate__right-form">
+            <label class="label" for="inputDrop2">Номер телефону*</label>
+            <div class="input-wrap">
+              <input
+                class="input"
+                style="cursor: pointer"
+                type="text"
+                id="inputDrop2"
+                value="+ 38 (0_ _"
+              />
+              <img src="./img/chev-down.svg" alt="" id="dropdownIcon2" />
+              <ul class="input-dropdown" id="dropdownList2">
+                <li class="input-dropdown__item2">+48_ _</li>
+                <li class="input-dropdown__item2">+ 38 (0_ _</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculate__submit">
+        <button class="primary" type="submit">Порахувати вартість</button>
+        <span>* - Усі поля обов'язкові для заповнення</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
     <footer id="footer" class="footer-wrap">
   <div class="container"></div>
   <div class="footer"></div>
