@@ -1,0 +1,79 @@
+.info {
+  margin: 35px 0 59px 0;
+  @media (max-width: 991px) {
+    margin: 49px 0 60px 0;
+  }
+}
+
+.info {
+  @include flex(row, center, center);
+  gap: 20px;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 600px) {
+    gap: 10px;
+  }
+  &__wrap-card {
+    @include flex(column, center, center);
+    gap: 20px;
+    @media (max-width: 1200px) {
+      width: 48%;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  &__wrap-card:nth-child(3) {
+    .info__card {
+      height: 177px;
+    }
+  }
+  &__card-four {
+    justify-content: flex-end;
+    background-image: url(../img/trend.png);
+    @media (max-width: 600px) {
+      background-image: url(../img/trend-m.png);
+      height: 270px;
+    }
+  }
+  &__card {
+    @include flex(column, center, center);
+    border-radius: 31px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    width: 278px;
+    height: 378px;
+    padding: 31px 25px 36px 25px;
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      height: 300px;
+    }
+    img {
+      width: 154px;
+      height: 129px;
+      @media (max-width: 600px) {
+        width: 129px;
+        height: 108px;
+      }
+    }
+    h3 {
+      text-align: center;
+      font-size: 35px;
+      font-weight: 700;
+    }
+    h5 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p {
+      text-align: center;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
