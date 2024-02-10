@@ -73,6 +73,21 @@
       }
     }
   }
+  &__social {
+    display: none;
+    @media (max-width: 480px) {
+      @include flex(row, flex-start, center);
+      gap: 15px;
+      margin-top: 24px;
+    }
+  }
+  &__social-icon {
+    @include flex(row, center, center);
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+    background: rgba(43, 172, 238, 0.2);
+  }
 }
 @keyframes spin {
   0% {
