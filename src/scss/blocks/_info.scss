@@ -34,14 +34,14 @@
     background-image: url(../img/trend.png);
     @media (max-width: 600px) {
       background-image: url(../img/trend-m.png);
-      height: 270px;
+      height: 270px !important;
     }
   }
   &__card {
     @include flex(column, center, center);
     border-radius: 31px;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     overflow: hidden;
     width: 278px;
     height: 378px;
