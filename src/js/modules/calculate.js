@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функція для форматування значення в бажаний формат
   function formatValue(value) {
-    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " m";
+    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " м";
   }
 
   // Оновлення лінії при завантаженні сторінки
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Додаємо обробник подій для зміни значення інпуту
   inputValue.addEventListener("input", function () {
-    // Оновлюємо значення на бігунку, видаляючи кому та " m"
+    // Оновлюємо значення на бігунку, видаляючи кому та " м"
     var numericValue = inputValue.value.replace(/,/g, "").replace(" м", "");
 
     // Перевіряємо, чи значення є числом та в межах допустимого діапазону
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функція для форматування значення в бажаний формат
   function formatValue(value) {
-    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " m";
+    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " м";
   }
 
   // Оновлення лінії при завантаженні сторінки
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Додаємо обробник подій для зміни значення інпуту
   inputValue2.addEventListener("input", function () {
-    // Оновлюємо значення на бігунку, видаляючи кому та " m"
+    // Оновлюємо значення на бігунку, видаляючи кому та " м"
     var numericValue2 = inputValue2.value.replace(/,/g, "").replace(" м", "");
 
     // Перевіряємо, чи значення є числом та в межах допустимого діапазону
