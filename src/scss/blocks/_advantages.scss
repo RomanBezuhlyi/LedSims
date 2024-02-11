@@ -1,0 +1,52 @@
+// ADVANTAGES
+
+.advantages-wrap {
+  margin-bottom: 50px;
+}
+.advantages {
+  h2 {
+    margin-bottom: 40px;
+    @media (max-width: 991px) {
+      font-size: 24px;
+      line-height: 35px;
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 20px;
+    @media (max-width: 991px) {
+      gap: 15px;
+    }
+  }
+  &__list-item {
+    position: relative;
+    width: 48%;
+    padding-left: 15px;
+    line-height: 24px;
+    @media (max-width: 991px) {
+      width: 100%;
+      padding-left: 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: $accent;
+      border-radius: 100%;
+    }
+    p {
+      display: inline-block;
+      font-weight: 600;
+      @media (max-width: 991px) {
+        display: block;
+        padding-left: 15px;
+      }
+    }
+  }
+}
