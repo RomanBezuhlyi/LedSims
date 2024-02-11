@@ -1,0 +1,112 @@
+// SOFTWARE
+
+.software-wrap {
+  margin: 30px 0 65px 0;
+  @media (max-width: 991px) {
+    margin: 0 0 80px 0;
+  }
+}
+
+.software-title {
+  margin-bottom: 56px;
+  @media (max-width: 991px) {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 36px;
+  }
+}
+.software {
+  @include flex(row, center, flex-start);
+  gap: 30px;
+  margin-bottom: 170px;
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__item {
+    @include flex(column, flex-end, center);
+    padding: 38px 76px 47px 76px;
+    width: 50%;
+    min-height: 413px;
+    border-radius: 31px;
+    background: linear-gradient(
+      140deg,
+      rgba(249, 250, 250, 1) 50%,
+      rgba(165, 181, 228, 0.30575980392156865) 60%,
+      rgba(165, 181, 228, 0.2777485994397759) 80%,
+      rgba(249, 250, 250, 1) 90%
+    );
+    @media (max-width: 991px) {
+      width: 100%;
+      padding: 45px 10px;
+    }
+    &-img {
+      width: 140px;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 32px;
+      @media (max-width: 991px) {
+        width: 105px;
+        margin-bottom: 30px;
+      }
+    }
+    h5 {
+      color: $textLight;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      @media (max-width: 991px) {
+        font-size: 22px;
+        margin-bottom: 14px;
+      }
+    }
+    p {
+      color: $textLight;
+      text-align: center;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 34px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+    }
+    &-btns {
+      @include flex(row, center, center);
+      gap: 15px;
+      @media (max-width: 1200px) {
+        margin-bottom: 10px;
+      }
+      @media (max-width: 389px) {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      a {
+        gap: 5px;
+        width: 200px;
+        height: 65px;
+        @media (max-width: 1200px) {
+          width: 170px;
+          height: 65px;
+          font-weight: 600;
+        }
+        @media (max-width: 389px) {
+          width: 100% !important;
+        }
+      }
+      a.primary:hover {
+        color: $white;
+        background-color: $accent;
+        opacity: 0.7;
+      }
+      a.outline {
+        color: $accent;
+        &:hover {
+          color: $white;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
