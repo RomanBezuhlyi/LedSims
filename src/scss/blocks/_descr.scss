@@ -1,0 +1,40 @@
+.descr-wrap {
+  margin: 0 50px 42px 50px;
+  padding: 55px 0 35px 0;
+  border-radius: 31px;
+  background-color: $bg;
+  @media (max-width: 991px) {
+    margin: 0 10px 60px 10px;
+    padding: 55px 0 44px 0;
+  }
+}
+
+.descr {
+  h2 {
+    margin-bottom: 42px;
+    @media (max-width: 991px) {
+      font-size: 24px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    line-height: 24px;
+    @media (max-width: 991px) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+  &__btn {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      padding: 12px 40px;
+      color: $accent;
+    }
+  }
+}
