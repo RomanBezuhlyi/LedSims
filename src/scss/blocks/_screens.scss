@@ -1,3 +1,5 @@
+// SCREENS
+
 .screens-wrap {
   margin-bottom: 110px;
   @media (max-width: 991px) {
@@ -60,8 +62,9 @@
   .open-modal {
     display: flex;
     margin: auto;
-    padding: 16px 58px 15px 58px;
+    padding: 16px 20px 15px 20px;
     border-radius: 12px;
+    width: 278px;
     @media (max-width: 991px) {
       display: none;
     }
