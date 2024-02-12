@@ -1,0 +1,60 @@
+.turnkey-wrap {
+  padding: 90px 0 80px 0;
+  margin: 0 50px;
+  margin-top: 60px;
+  border-radius: 31px;
+  background: $bg;
+  @media (max-width: 991px) {
+    padding: 40px 0;
+    margin: 0 10px;
+    margin-top: 60px;
+  }
+}
+.turnkey-wrap.second {
+  margin-bottom: 110px;
+  @media (max-width: 991px) {
+    margin-bottom: 55px;
+  }
+}
+
+.turnkey {
+  h2 {
+    margin-bottom: 42px;
+    span {
+      color: $accent;
+    }
+    &.second {
+      width: auto;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 56px;
+      @media (max-width: 991px) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+      }
+    }
+    @media (max-width: 991px) {
+      width: 265px;
+      font-size: 24px;
+      line-height: 35px;
+      margin-bottom: 23px;
+    }
+  }
+  p {
+    font-size: 19px;
+    line-height: 28px;
+    margin-left: 93px;
+    @media (max-width: 991px) {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+  p.second {
+    margin-right: 150px;
+    @media (max-width: 991px) {
+      margin-right: 0;
+    }
+  }
+}

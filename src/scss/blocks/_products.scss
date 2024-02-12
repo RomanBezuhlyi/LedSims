@@ -30,6 +30,14 @@
     margin-bottom: 36px;
   }
 }
+.products-title.second {
+  margin-bottom: 50px;
+  @media (max-width: 991px) {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 36px;
+  }
+}
 .products {
   @include flex(row, flex-start, flex-start);
   flex-wrap: wrap;

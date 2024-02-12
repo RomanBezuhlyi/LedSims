@@ -21,9 +21,12 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  object-fit: cover;
   max-width: 50vw;
+  height: 100%;
   @media (max-width: 991px) {
     max-width: 100%;
+    height: auto;
   }
 }
 .hero {
