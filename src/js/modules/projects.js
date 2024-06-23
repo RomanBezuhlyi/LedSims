@@ -24,39 +24,25 @@ var swiper = new Swiper(".projects__tabs", {
 
 document.addEventListener("DOMContentLoaded", function () {
   const playButtons = document.querySelectorAll(".play");
-  let currentVideo;
 
   playButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      const video = button.previousElementSibling;
-      toggleVideo(video, button);
+      const videoOverlay = button.previousElementSibling;
+      const iframe = videoOverlay.previousElementSibling;
+      playIframe(iframe, videoOverlay, button);
     });
   });
 
-  function toggleVideo(video, button) {
-    if (currentVideo && currentVideo !== video) {
-      currentVideo.pause();
-      currentVideo.nextElementSibling.classList.remove("hide");
-    }
+  function playIframe(iframe, videoOverlay, button) {
+    const src = iframe.getAttribute("src");
+    iframe.setAttribute("src", src + "&autoplay=1");
 
-    if (video.paused || video.ended) {
-      video.play();
+    // Додати затримку в 1 секунду перед приховуванням елементів
+    setTimeout(() => {
+      videoOverlay.classList.add("hide");
       button.classList.add("hide");
-      currentVideo = video;
-    } else {
-      video.pause();
-      button.classList.remove("hide");
-      currentVideo = null;
-    }
+    }, 1000); // 1000 мілісекунд = 1 секунда
   }
-
-  const videos = document.querySelectorAll("video");
-
-  videos.forEach((video) => {
-    video.addEventListener("click", function () {
-      toggleVideo(video, video.nextElementSibling);
-    });
-  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
