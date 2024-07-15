@@ -35,28 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.removeEventListener("click", closeMobileMenuIfClickedOutside);
   });
 
-  // Event listener for navigation items
-  navItems.forEach(function (item, index) {
+  // Event listener for navigation items (without active link highlighting)
+  navItems.forEach(function (item) {
     item.addEventListener("click", function () {
-      // Add the 'active' class to the clicked item
-      navItems.forEach(function (item) {
-        item.classList.remove("active");
-      });
-      item.classList.add("active");
-
-      // Save the index of the clicked item in local storage
-      localStorage.setItem("selectedNavItemIndex", index);
+      // Handle click event if needed, but no active class toggling
     });
   });
-
-  // Set the 'active' class based on local storage on page load
-  const selectedNavItemIndex = localStorage.getItem("selectedNavItemIndex");
-  if (selectedNavItemIndex !== null) {
-    navItems.forEach(function (item, index) {
-      item.classList.toggle(
-        "active",
-        index.toString() === selectedNavItemIndex
-      );
-    });
-  }
 });

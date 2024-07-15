@@ -72,9 +72,6 @@
       border-color: $accent;
     }
   }
-  &__nav-item.active {
-    border-color: $accent;
-  }
   &__num {
     @include flex(row, center, center);
     gap: 10px;
@@ -126,7 +123,7 @@
     }
     &:hover {
       img {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }

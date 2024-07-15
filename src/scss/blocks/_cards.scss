@@ -1,0 +1,47 @@
+.cards-wrap {
+  padding: 80px 0 70px 0;
+  @media (max-width: 991px) {
+    padding: 65px 0 50px 0;
+  }
+}
+.cards {
+  @include flex(row, center, center);
+  gap: 20px;
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  &__item {
+    @include flex(column, center, center);
+    width: 25%;
+    height: 200px;
+    padding: 0 32px;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 31px;
+    @media (max-width: 991px) {
+      width: 45%;
+      padding: 0 60px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    img {
+      margin-bottom: 27px;
+      @media (max-width: 991px) {
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      color: rgb(9, 9, 17);
+      font-family: $font-main;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+  }
+}
