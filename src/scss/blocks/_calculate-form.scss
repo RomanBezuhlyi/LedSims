@@ -53,6 +53,23 @@
   &__left-form,
   &__right-form {
     @include flex(column, flex-start, flex-start);
+    &.new {
+      @include flex(row, flex-start, flex-end);
+      gap: 15px;
+      width: 100%;
+    }
+    &--large {
+      width: 75%;
+      @media (max-width: 768px) {
+        width: 50%;
+      }
+    }
+    &--small {
+      width: 25%;
+      @media (max-width: 768px) {
+        width: 50%;
+      }
+    }
     .label {
       display: block;
       color: $text;
@@ -116,7 +133,8 @@
         font-size: 15px;
       }
       &__item,
-      &__item2 {
+      &__item2,
+      &__item3 {
         width: 100%;
         font-weight: 500;
         padding: 5px 22px 5px 22px;
@@ -124,7 +142,8 @@
         @include transition;
       }
       &__item:hover,
-      &__item2:hover {
+      &__item2:hover,
+      &__item3:hover {
         color: $accent;
         background-color: rgba($color: $grey, $alpha: 0.2);
       }

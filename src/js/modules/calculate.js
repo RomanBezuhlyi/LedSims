@@ -163,3 +163,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const inputDrop3 = document.getElementById("inputDrop3");
+  const dropdownIcon3 = document.getElementById("dropdownIcon3");
+  const dropdownList3 = document.getElementById("dropdownList3");
+
+  // Toggle dropdown visibility
+  inputDrop3.addEventListener("click", function () {
+    dropdownList3.style.display =
+      dropdownList3.style.display === "flex" ? "none" : "flex";
+    dropdownIcon3.style.transform =
+      dropdownList3.style.display === "flex"
+        ? "rotate(180deg)"
+        : "rotate(0deg)";
+  });
+
+  // Handle item selection
+  dropdownList3.addEventListener("click", function (e) {
+    if (e.target.classList.contains("input-dropdown__item3")) {
+      inputDrop3.value = e.target.textContent;
+      dropdownList3.style.display = "none";
+      dropdownIcon3.style.transform = "rotate(0deg)";
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!inputDrop3.contains(e.target) && !dropdownList3.contains(e.target)) {
+      dropdownList3.style.display = "none";
+      dropdownIcon3.style.transform = "rotate(0deg)";
+    }
+  });
+});
