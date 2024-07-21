@@ -273,3 +273,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update on resize
   window.addEventListener("resize", updateScreenTypeText);
 });
+
+// ===========================
+
+document.querySelector(".check").addEventListener("click", function () {
+  this.classList.toggle("active-bg");
+});
