@@ -1,5 +1,9 @@
 // HEADER
 
+.header-wrap {
+  padding-top: 27px;
+}
+
 .header {
   @include flex(row, space-between, center);
   gap: 10px;
@@ -56,12 +60,12 @@
   }
   &__nav-item {
     display: inline-flex;
-    padding: 41px 0 42px 0;
+    padding: 0 0 27px 0;
     font-weight: 600;
     border-bottom: 1px solid transparent;
     @include transition;
     @media (max-width: 1200px) {
-      padding: 21px 0 22px 0;
+      padding: 0 0 22px 0;
       font-size: 12px;
     }
     @media (max-width: 991px) {
@@ -126,5 +130,32 @@
         transform: scale(1.1);
       }
     }
+  }
+}
+
+.menu {
+  margin-top: 36px;
+  @media (max-width: 1200px) {
+    margin-top: 21px;
+  }
+  @media (max-width: 991px) {
+    margin-top: 0;
+  }
+}
+.search {
+  position: relative;
+  &__input {
+    width: 310px;
+    height: 50px;
+    padding: 13px 20px;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 15px;
+    font-family: $font-main;
+    font-size: 16px;
+  }
+  &__icon {
+    position: absolute;
+    top: 13px;
+    right: 20px;
   }
 }
