@@ -196,3 +196,80 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownList = document.getElementById("dropdownList");
+  const dropdownList3 = document.getElementById("dropdownList3");
+  const inputDrop = document.getElementById("inputDrop");
+  const inputDrop3 = document.getElementById("inputDrop3");
+
+  const externalSizes = ["P10", "P8", "P6", "P5", "P4", "P3", "P2.5"];
+  const internalSizes = ["P5", "P4", "P3", "P2.5", "P2", "P1.5"];
+
+  function updateScreenTypeText() {
+    const isSmallScreen = window.innerWidth < 991;
+    const items = document.querySelectorAll(
+      "#dropdownList .input-dropdown__item"
+    );
+
+    items.forEach((item) => {
+      item.textContent = isSmallScreen
+        ? item.getAttribute("data-short")
+        : item.getAttribute("data-full");
+    });
+
+    // Update the input value based on screen size
+    if (
+      inputDrop.value === "Зовнішній екран" ||
+      inputDrop.value === "Зовнішній"
+    ) {
+      inputDrop.value = isSmallScreen ? "Зовнішній" : "Зовнішній екран";
+    } else if (
+      inputDrop.value === "Внутрішній екран" ||
+      inputDrop.value === "Внутрішній"
+    ) {
+      inputDrop.value = isSmallScreen ? "Внутрішній" : "Внутрішній екран";
+    }
+  }
+
+  dropdownList.addEventListener("click", function (event) {
+    if (event.target.classList.contains("input-dropdown__item")) {
+      inputDrop.value = event.target.getAttribute("data-full");
+
+      // Clear current options in the size dropdown
+      dropdownList3.innerHTML = "";
+
+      let sizes = [];
+      if (inputDrop.value === "Зовнішній екран") {
+        sizes = externalSizes;
+      } else if (inputDrop.value === "Внутрішній екран") {
+        sizes = internalSizes;
+      }
+
+      // Populate the size dropdown with the relevant options
+      sizes.forEach((size) => {
+        const li = document.createElement("li");
+        li.classList.add("input-dropdown__item3");
+        li.textContent = size;
+        dropdownList3.appendChild(li);
+      });
+
+      // Update the value of the size input to the first size in the list
+      if (sizes.length > 0) {
+        inputDrop3.value = sizes[0];
+      }
+    }
+  });
+
+  dropdownList3.addEventListener("click", function (event) {
+    if (event.target.classList.contains("input-dropdown__item3")) {
+      inputDrop3.value = event.target.textContent;
+    }
+  });
+
+  // Initial update
+  updateScreenTypeText();
+
+  // Update on resize
+  window.addEventListener("resize", updateScreenTypeText);
+});
