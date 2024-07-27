@@ -1,6 +1,6 @@
-import "./modules/menu.js";
-import "./modules/calculate.js";
-import "./modules/projects.js";
-import "./modules/areas.js";
-import "./modules/faq.js";
-import "./modules/descr.js";
+import './modules/areas.js'
+import './modules/calculate.js'
+import './modules/descr.js'
+import './modules/faq.js'
+import './modules/menu.js'
+import './modules/partners.js'
